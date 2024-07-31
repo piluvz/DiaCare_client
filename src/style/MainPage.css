@@ -136,6 +136,10 @@
   align-self: center;
 }
 
+.card-title img.changeToYellow{
+  filter: invert(91%) sepia(57%) saturate(4755%) hue-rotate(332deg) brightness(94%) contrast(93%);
+}
+
 .card h3 {
   font-family: 'CocoSharp Bold', sans-serif;
   color: #464646;
@@ -166,6 +170,10 @@
 
 .btn.card-btn.green {
   background-color: #34a853;
+}
+
+.btn.card-btn.yellow{
+  background-color: #df47a2;
 }
 
 

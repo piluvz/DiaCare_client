@@ -50,10 +50,10 @@ const MainPage = () => {
     <div className="card">
       <div className='card-title'>
         <h3>Сканер-помощник для еды</h3>
-        <img src="Ellipse purple.png" alt="" />
+        <img src="Ellipse 1.png" alt="" />
       </div>
       <p>Сфотографируйте продукт или блюдо, и наш ИИ подскажет, можно ли его употреблять при диабете. Ведите учет съеденного в течение дня, отслеживайте уровень сахара, а также получите прогнозы для вашего здоровья.</p>
-      <Link to="/nutri-plan"><button className="btn card-btn purple">ПЕРЕЙТИ</button></Link>
+      <Link to="/food-scanner"><button className="btn card-btn yellow">ПЕРЕЙТИ</button></Link>
     </div>
   </div>
 </section>
