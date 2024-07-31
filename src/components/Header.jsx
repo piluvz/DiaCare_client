@@ -20,9 +20,10 @@ const Header = () => {
         </div>
         <nav className={`nav ${menuOpen ? 'open' : ''}`}>
           <ul className="nav-list">
-            <li className="nav-item"><a href="#home" className="nav-link">Home</a></li>
-            <li className="nav-item"><a href="#features" className="nav-link">Features</a></li>
-            <li className="nav-item"><a href="#about" className="nav-link">About</a></li>
+            <li className="nav-item"><a href="/" className="nav-link">Home</a></li>
+            <li className="nav-item"><a href="/nutri-plan" className="nav-link">Assistant</a></li>
+            <li className="nav-item"><a href="#features" className="nav-link">Extension</a></li>
+            <li className="nav-item"><a href="/food-scanner" className="nav-link">Food Scanner</a></li>
             <div className="auth-buttons-mobile">
               <Link to="/register"><button className="btn-mobile">Sign up</button></Link>
               <Link to="/login"><button className="btn-mobile">Log in</button></Link>
