@@ -33,16 +33,15 @@
   display: flex;
   flex-direction: column;
   width: 100vw;
-  /* border: solid; */
   align-items: center;
   background-color: #F7F3F7;
   }
   
   
   .container_box {
-  width: 750px;
+  max-width: 750px;
+  width: 100%;
   height: 1000px;
-  /* border: solid; */
   gap: 20px;
   display: flex;
   flex-direction: column;
@@ -54,20 +53,19 @@
   }
   
   .container_box2 {
-  width: 750px;
-  /* height: 800px; */
-  /* border: solid; */
+  max-width: 750px;
+  width: 100%;
   gap: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding-top:50px; */
   background-color: white;
   border-radius: 10px;
   }
   
   .custom-form-control {
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   box-shadow: 0px 0px 4px 1.5px rgba(0, 0, 0, 0.15);
   font-family: 'CocoSharp Regular';
   border-radius: 10px;
@@ -85,11 +83,12 @@
   .weight_and_height {
   display: flex;
   gap: 20px;
+  max-width: 600px;
+  width: 100%;
   
   }
   
   .height {
-  width: 290px;
   box-shadow: 0px 0px 4px 1.5px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   }
@@ -97,9 +96,8 @@
   .form-container {
   display: flex;
   flex-direction: column;
-  align-self: flex-start;
-  margin-left: 75px;
-  /* margin-top: 10px; */
+  max-width: 600px;
+  width: 100%;
   }
   
   .radio-container {
@@ -163,12 +161,37 @@
   }
   
   .spinner {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #8FA2E0; /* Blue */
+    border: 16px solid #f3f3f3; 
+    border-top: 16px solid #8FA2E0;
     border-radius: 50%;
     width: 120px;
     height: 120px;
     animation: spin 2s linear infinite;
+  }
+  
+  @media (max-width: 768px) {
+    .features {
+      margin-top: 30px;
+      padding: 25px;
+    }
+  
+    .container_box {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .container_box2 {
+      width: 100%;
+    }
+  
+    .weight_and_height {
+      flex-direction: column;
+    }
+  
+    .form-container {
+      width: 100%;
+    }
+
   }
   
   

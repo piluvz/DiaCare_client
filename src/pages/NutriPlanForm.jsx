@@ -233,7 +233,7 @@ const DiabetesForm = () => {
             />
           </div>
   
-          <div style={{ display: 'flex', alignItems: 'center', width: '80%' }}>
+          <div style={{ display: 'flex', alignItems: 'center', maxWidth: '600px', width: '100%' }}>
             <FormControl
               className="custom-form-control"
               variant="outlined"
