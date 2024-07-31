@@ -1,0 +1,242 @@
+/* Применить box-sizing: border-box ко всем элементам */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'CocoSharp ExtraBold';
+  src: url('../../coco-sharp/Coco-Sharp-Extrabold-trial.ttf');
+}
+
+@font-face {
+  font-family: 'CocoSharp Bold';
+  src: url('../../coco-sharp/Coco-Sharp-Bold-trial.ttf');
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Убрать горизонтальный скролл */
+}
+
+.header {
+  background-color: #F7F3F7;
+  padding: 7px 10px;
+  box-shadow: 0px -23px 58.4px 0 rgba(0, 0, 0, 0.25);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  border-bottom-left-radius: 17px;
+  border-bottom-right-radius: 17px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%; /* Убедиться, что контейнер не выходит за пределы экрана */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo-circle {
+  width: 23px;
+  height: 23px;
+  background-color: #8FA2E0;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.logo-text {
+  background: linear-gradient(90deg, #434343 0%, #a9a9a9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'CocoSharp ExtraBold', sans-serif;
+  font-size: 30px;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'CocoSharp Bold', sans-serif;
+  color: #575757;
+}
+
+.nav-link:hover {
+  color: #7990dc;
+}
+
+.auth-buttons {
+  display: flex;
+}
+
+.btn {
+  background-color: #8FA2E0;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  margin-left: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: 'CocoSharp Bold', sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0px 0px 5.5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-signup {
+  background-color: white;
+  color: #575757;
+  box-shadow: 0px 0px 5.5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-signup:hover {
+  background-color: #6c63ff;
+  color: white;
+}
+
+.btn-login:hover {
+  background-color: #6c63ff;
+  color: #fff;
+}
+
+.btn-mobile {
+  background-color: transparent;
+  color: #575757;
+  border: none;
+  padding: 6px 14px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: 'CocoSharp Bold', sans-serif;
+  font-size: 16px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 25px;
+  height: 3px;
+  background-color: #575757;
+  display: block;
+  position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: '';
+  width: 25px;
+  height: 3px;
+  background-color: #575757;
+  display: block;
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+.menu-icon::before {
+  top: -8px;
+}
+
+.menu-icon::after {
+  bottom: -8px;
+}
+
+.nav.open .nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav.open {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #F7F3F7;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    z-index: 999;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Уменьшить вертикальное расстояние между элементами */
+  }
+
+  .nav-item {
+    margin-right: 0;
+  }
+
+  .auth-buttons {
+    display: none;
+  }
+
+  .auth-buttons-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Уменьшить вертикальное расстояние между кнопками */
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    padding: 7px 10px; /* Добавление отступа */
+  }
+}
+
+@media (min-width: 769px) {
+  .auth-buttons-mobile {
+    display: none;
+  }
+}
