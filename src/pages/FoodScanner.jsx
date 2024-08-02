@@ -25,7 +25,7 @@ export default function Newcomp() {
             setIsLoading(true);
             try {
                 const base64Image = image.split(',')[1]; // Extract base64 string without metadata
-                const response = await axios.post('http://localhost:3001/analyze-food', {
+                const response = await axios.post('https://diacareserver-production.up.railway.app/analyze-food', {
                     imageBase64: base64Image
                 });
                 const analysisResult = response.data.result;

@@ -70,7 +70,7 @@ const DiabetesForm = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:3001/api/diabetes', {
+      const response = await fetch('https://diacareserver-production.up.railway.app/api/diabetes', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

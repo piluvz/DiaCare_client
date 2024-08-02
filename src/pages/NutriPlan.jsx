@@ -13,7 +13,7 @@ const NutritionPlan = () => {
   useEffect(() => {
     const fetchNutritionPlan = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/nutrition-plan', {
+        const response = await fetch('https://diacareserver-production.up.railway.app/api/nutrition-plan', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ const NutritionPlan = () => {
         const uniqueIngredients = Object.values(collectedIngredients);
         setIngredients(uniqueIngredients);
 
-        const productResponse = await fetch('http://localhost:3001/api/search-products', {
+        const productResponse = await fetch('https://diacareserver-production.up.railway.app/api/search-products', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
