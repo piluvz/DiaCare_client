@@ -175,3 +175,72 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+  
+  @media (max-width: 844px)  {
+
+    .nutrition-plan {
+      background-color: #F7F3F7;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 30px 10px;
+      margin-top: 50px;
+    }
+    
+    .nutrition-plan-cont{
+      background-color: white;
+      border-radius: 20px;
+      padding: 20px 30px;
+    }
+
+    .plan-title {
+      font-size: 23px;
+      width: 100%;
+      font-family: 'CocoSharp Bold', sans-serif;
+      font-weight: bold;
+      color: #464646;
+    }
+
+    .product-list h2 {
+      font-size: 23px;
+      margin-bottom: 10px;
+      font-family: 'CocoSharp Bold', sans-serif;
+      color: #464646;
+    }
+    
+    
+    .day-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      flex: 1;
+      min-width: 100%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-height: 200px;
+      min-height: 0px;
+    }
+
+    .day-card h2 {
+      background-color: #8FA2E0;
+      padding: 14px 20px;
+      margin: -20px -20px 20px -20px;
+      border-radius: 8px 8px 0 0;
+      color: white;
+      font-size: 17px;
+      font-family: 'Gilroy Medium';
+      text-transform: uppercase;
+      /* width: 100%; */
+    }
+
+    .total-cost, .carbohydrates {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      flex: 1;
+      margin-right: 0px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
