@@ -10,6 +10,7 @@ import NutriPlanGenerator from './pages/NutriPlanForm';
 import NutritionPlan from './pages/NutriPlan';
 import './App.css';
 import ScrollToTop from './components/ScrollToTop';
+import { Analytics } from "@vercel/analytics/react"
 
 
 function App() {
@@ -28,20 +29,7 @@ function App() {
       </Switch>
       <Footer />
     </Router>
-    // <Router>
-    //   <NavBar />
-    //   <ScrollToTop />
-    //   <Routes>
-    //     <Route path="/" element={<MainPage />} />
-    //     <Route path="/login" element={<Login />} />
-    //     <Route path="/register" element={<Register />} />
-    //     <Route path="/food-scanner" element={<FoodScannerImageUpload />} />
-    //     <Route path="/nutri-plan" element={<NutriPlanGenerator />} />
-    //     <Route path="/food" element={<NutritionPlan />} />
-    //     <Route path="*" element={<h1>Not Found</h1>} />
-    //   </Routes>
-    //   <Footer />
-    // </Router>
+    
   );
 }
 
