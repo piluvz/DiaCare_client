@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Compressor from 'compressorjs';
 import '../style/FoodScanner.css';
 
 export default function Newcomp() {
@@ -12,11 +13,19 @@ export default function Newcomp() {
     const handleImageUpload = (event) => {
         const file = event.target.files[0];
         if (file) {
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                setImage(reader.result);
-            };
-            reader.readAsDataURL(file);
+            new Compressor(file, {
+                quality: 0.6,
+                success: (compressedResult) => {
+                    const reader = new FileReader();
+                    reader.onloadend = () => {
+                        setImage(reader.result);
+                    };
+                    reader.readAsDataURL(compressedResult);
+                },
+                error(err) {
+                    console.error('Error compressing image:', err);
+                },
+            });
         }
     };
 
