@@ -207,6 +207,10 @@
 
 
 @media (max-width: 768px) {
+  .transition-div{
+    height: 50px;
+  }
+  
   .image-content {
     display: none;
   }
