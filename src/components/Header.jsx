@@ -13,7 +13,8 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <div className="logo">
-          <span className="logo-circle"></span>
+          <img className="logo-circle" src="logo.png" alt="" />
+          {/* <span className="logo-circle"></span> */}
           <Link to="/" style={{ textDecoration: 'none' }}>
             <span className="logo-text">DiaCare</span>
           </Link>

@@ -51,10 +51,10 @@ body, html {
 }
 
 .logo-circle {
-  width: 23px;
-  height: 23px;
-  background-color: #8FA2E0;
-  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  /* background-color: #8FA2E0;
+  border-radius: 50%; */
   margin-right: 8px;
 }
 
@@ -198,7 +198,7 @@ body, html {
   .nav.open {
     display: flex;
     position: absolute;
-    top: 60px;
+    top: 58.2px;
     right: 20px;
     background-color: #F7F3F7;
     border-radius: 8px;
