@@ -25,16 +25,16 @@ const Header = () => {
             <li className="nav-item"><a href="/nutri-plan" className="nav-link">Assistant</a></li>
             <li className="nav-item"><a href="#features" className="nav-link">Extension</a></li>
             <li className="nav-item"><a href="/food-scanner" className="nav-link">Food Scanner</a></li>
-            <div className="auth-buttons-mobile">
+            {/* <div className="auth-buttons-mobile">
               <Link to="/register"><button className="btn-mobile">Sign up</button></Link>
               <Link to="/login"><button className="btn-mobile">Log in</button></Link>
-            </div>
+            </div> */}
           </ul>
         </nav>
-        <div className="auth-buttons">
+        {/* <div className="auth-buttons">
           <Link to="/register"><button className="btn btn-signup">Sign up</button></Link>
           <Link to="/login"><button className="btn btn-login">Log in</button></Link>
-        </div>
+        </div> */}
         <button className="menu-toggle" onClick={toggleMenu}>
           <span className="menu-icon"></span>
         </button>
