@@ -126,10 +126,11 @@ export default function Newcomp() {
                         </h2>
                     </div>
                     <p>{result.description}</p>
-                    <h3>Рекомендации:</h3>
-                    <p>{result.portion}</p>
                     <h3>Количество углеводов:</h3>
                     <p>{carbohydrates}</p>
+                    <h3>Рекомендации:</h3>
+                    <p>{result.portion}</p>
+                    
                 </div>}
             </div>
             
