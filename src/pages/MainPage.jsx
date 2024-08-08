@@ -9,7 +9,7 @@ const MainPage = () => {
     <main className="main">
       <div className="main-container">
         <div className="text-content">
-          <h1>Your Partner in Diabetes Management</h1>
+          <h1>Ваш помощник в управлении диабетом</h1>
           <p>
             DiaCare — инновационное решение для людей с диабетом
             и тех, кто стремится предотвратить развитие этого заболевания. <br className="mobile-only"/><br className="mobile-only"/>

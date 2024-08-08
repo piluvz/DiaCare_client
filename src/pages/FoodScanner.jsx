@@ -45,13 +45,12 @@ export default function Newcomp() {
                 const descriptionLine = lines[0];
                 const safetyLine = lines[1].toUpperCase().includes("NOT SAFE") ? "NOT SAFE" : "SAFE";
                 const portionLine = lines.slice(2).join('\n');
-
+                
                 setSafetyStatus(safetyLine);
                 setResult({
                     description: descriptionLine,
                     portion: portionLine
                 });
-
 
                 setIsImageSent(true);
             } catch (error) {
@@ -64,6 +63,8 @@ export default function Newcomp() {
             console.log('No image uploaded');
         }
     };
+
+    const translatedSafetyStatus = safetyStatus === "SAFE" ? "БЕЗОПАСНА" : "НЕБЕЗОПАСНА";
 
     return (
         <div className='new_cont'>
@@ -116,8 +117,8 @@ export default function Newcomp() {
                 {result && <div className="result-container">
                     <div className='result-container result-container-2 '>
                         <h2>
-                            Your plate is   <span className={safetyStatus === "SAFE" ? "safe" : "not-safe"}>
-                                {safetyStatus}
+                            Ваща пища  <span className={translatedSafetyStatus === "БЕЗОПАСНА" ? "safe" : "not-safe"}>
+                                {translatedSafetyStatus}
                             </span>
                         </h2>
                     </div>
