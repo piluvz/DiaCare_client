@@ -9,7 +9,7 @@ export default function Newcomp() {
     const [isImageSent, setIsImageSent] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [safetyStatus, setSafetyStatus] = useState('');
-    const [carbohydrates, setCarbohydrates] = useState('');
+
 
     const handleImageUpload = (event) => {
         const file = event.target.files[0];
@@ -45,11 +45,11 @@ export default function Newcomp() {
 
                 const descriptionLine = lines[0];
                 const safetyLine = lines[1].toUpperCase().includes("NOT SAFE") ? "NOT SAFE" : "SAFE";
-                const carbsLine = lines[2].split('углеводов.')[0].split('содержит около')[1].trim();
+                
                 const portionLine = lines.slice(3).join('\n');
                 
                 setSafetyStatus(safetyLine);
-                setCarbohydrates(carbsLine);
+                
                 setResult({
                     description: descriptionLine,
                     portion: portionLine
@@ -126,8 +126,6 @@ export default function Newcomp() {
                         </h2>
                     </div>
                     <p>{result.description}</p>
-                    <h3>Количество углеводов:</h3>
-                    <p>{carbohydrates}</p>
                     <h3>Рекомендации:</h3>
                     <p>{result.portion}</p>
                     
